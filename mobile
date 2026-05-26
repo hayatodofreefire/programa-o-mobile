@@ -1,0 +1,88 @@
+const input = require("readline-sync");
+let nome = input.question("digite seu nome: ");
+let idade = number(input.question("digite sua idade: "));
+let cidade = input.question("digite sua cidade: ");
+console.log("Olá! Meu nome é ${nome}, tenho ${idade} anos e sou de ${cidade}.");
+
+const input = require('readline-sync')();
+
+let num1 = Number(input('Digite o primeiro número: '));
+let num2 = Number(input('Digite o segundo número: '));
+
+console.log(`Soma: ${num1 + num2}`);
+console.log(`Subtração: ${num1 - num2}`);
+console.log(`Multiplicação: ${num1 * num2}`);
+
+if (num2 === 0) {
+    console.log('Erro: divisão por zero não é permitida.');
+} else {
+    console.log(`Divisão: ${num1 / num2}`);
+}
+
+let soma = 0;
+
+for (let i = 1; i <= 5; i++) {
+let nota = Number(prompt(`Digite a ${i}ª nota:`));
+soma += nota;
+}
+
+let media = soma / 5;
+
+console.log(`Média: ${media.toFixed(2)}`);
+
+if (media >= 7) {
+console.log("Aprovado");
+} else if (media >= 5) {
+console.log("Recuperação");
+} else {
+console.log("Reprovado");
+}
+
+const input = require('readline-sync')();
+
+let soma = 0;
+
+for (let i = 1; i <= 5; i++) {
+    let nota = Number(input(`Digite a nota ${i}: `));
+    soma += nota;
+}
+
+let media = soma / 5;
+
+console.log(`Média: ${media}`);
+
+if (media >= 7) {
+    console.log('Aprovado');
+} else if (media >= 5) {
+    console.log('Recuperação');
+} else {
+    console.log('Reprovado');
+}
+
+const input = require('readline-sync')();
+
+let numero = Number(input('Digite um número: '));
+
+for (let i = 1; i <= 10; i++) {
+    console.log(`${numero} x ${i} = ${numero * i}`);
+}
+
+const input = require('readline-sync')();
+
+const secreto = 42;
+let tentativas = 0;
+
+while (true) {
+    let numero = Number(input('Digite um número: '));
+
+    tentativas++;
+
+    if (numero === secreto) {
+        console.log(`Parabéns! Você acertou em ${tentativas} tentativas.`);
+        break;
+    } else if (numero < secreto) {
+        console.log('O número secreto é maior.');
+    } else {
+        console.log('O número secreto é menor.');
+    }
+}
