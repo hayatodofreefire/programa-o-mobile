@@ -1,0 +1,121 @@
+function saudacao(nome) {
+    return "Olá, " + nome + "! Bons estudos.";
+}
+
+let nome = prompt("Digite seu nome:");
+console.log(saudacao(nome));
+
+function ehPar(numero) {
+    return numero % 2 === 0;
+}
+
+let num = Number(prompt("Digite um número:"));
+
+if (ehPar(num)) {
+    console.log("É par");
+} else {
+    console.log("É ímpar");
+}
+
+
+function calcularMedia(n1, n2, n3) {
+    return (n1 + n2 + n3) / 3;
+}
+
+function situacao(media) {
+    if (media >= 7) {
+        return "Aprovado";
+    } else if (media >= 5) {
+        return "Recuperação";
+    } else {
+        return "Reprovado";
+    }
+}
+
+let n1 = Number(prompt("Nota 1:"));
+let n2 = Number(prompt("Nota 2:"));
+let n3 = Number(prompt("Nota 3:"));
+
+let media = calcularMedia(n1, n2, n3);
+
+console.log("Média:", media);
+console.log("Situação:", situacao(media));
+
+
+function soma(a, b) {
+    return a + b;
+}
+
+function subtrai(a, b) {
+    return a - b;
+}
+
+function multiplica(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b === 0) {
+        return "Erro: divisão por zero";
+    }
+    return a / b;
+}
+
+let x = Number(prompt("Digite o primeiro número:"));
+let y = Number(prompt("Digite o segundo número:"));
+
+console.log("Soma:", soma(x, y));
+console.log("Subtração:", subtrai(x, y));
+console.log("Multiplicação:", multiplica(x, y));
+console.log("Divisão:", divide(x, y));
+
+
+function triploDeclaracao(x) {
+    return x * 3;
+}
+
+const triploExpressao = function(x) {
+    return x * 3;
+};
+
+const triploArrow = x => x * 3;
+
+let num = Number(prompt("Digite um número:"));
+
+console.log(triploDeclaracao(num));
+console.log(triploExpressao(num));
+console.log(triploArrow(num));
+
+
+function fatorial(n) {
+    let resultado = 1;
+
+    for (let i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+
+    return resultado;
+}
+
+let num = Number(prompt("Digite um número:"));
+console.log("Fatorial:", fatorial(num));
+
+
+function ehPrimo(n) {
+    if (n < 2) return false;
+
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+let N = Number(prompt("Digite um número:"));
+
+for (let i = 2; i <= N; i++) {
+    if (ehPrimo(i)) {
+        console.log(i);
+    }
+}
